@@ -11,13 +11,13 @@ Devices related resources of the **Devices API**
 ### List Devices [GET]
 
 + Parameters
-    + sn (optional, text, `1234`) ... Text `sn` of the desired device(s).
-    + name (optional, text, `device_1`) ... Text `name` of the desired device(s).
-    + ip (optional, text, `192.168.0.0`) ... Text `ip` of the desired device(s).
-    + state (optional, number, `2`) ... Numeric `state` of the desired device(s).
-    + productName (optional, text, `zkproduct`) ... Text `productName` of the desired device(s).
-    + pagination (optional, number, `10`) ... Numeric `pagination` of the desired pagination size.
-    + offset (optional, number, `0`) ... Numeric `offset` of the desired offset of the pagination.
+    + sn (optional, string, `1234`) ... Text `sn` of the desired device(s).
+    + name (optional, string, `device_1`) ... Text `name` of the desired device(s).
+    + ip (optional, string, `192.168.0.0`) ... Text `ip` of the desired device(s).
+    + state (optional, number, `2`) ... Numeric `state` of the desired device(s). Lookup value.
+    + productName (optional, string, `zkproduct`) ... Text `productName` of the desired device(s).
+    + pagination (optional, integer, `10`) ... Numeric `pagination` of the desired pagination size.
+    + offset (optional, integer, `0`) ... Numeric `offset` of the desired offset of the pagination.
 
 + Response 200 (application/json)
 
