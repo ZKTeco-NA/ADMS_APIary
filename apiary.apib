@@ -66,8 +66,12 @@ A single Device object with all its details
         { "errorCode": "6" }
         
 ### Update a Device [POST]
-#### state allowed values: DvcSttsA (Active) - DvcSttsI (Inactive) - DvcSttsC (Connected) - DvcSttsD (Disconnected)
-#### error codes will be either: a) missing mndatory field (SN or IP) b) duplicate entry (SN or IP) c) IP format is wrong  d) invalid id
+state allowed values: DvcSttsA (Active) - DvcSttsI (Inactive) - DvcSttsC (Connected) - DvcSttsD (Disconnected)</br>
+error codes will be either:</br>
+a) missing mndatory field (SN or IP)</br>
+b) duplicate entry (SN or IP)</br>
+c) IP format is wrong</br>
+d) invalid id
 + Request (application/json)
 
         { "sn": "1234", "name": "device", "ip": "192.168.0.0", "state": 2, "productName": "myProduct", "userCount": 2, "fingerPrintCount": 3, "transactionCount": 12}
