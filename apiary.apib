@@ -181,3 +181,52 @@ d) invalid serial
             { "errorCode": "3" },
             { "errorCode": "6" }
         ]
+
+# Group Person
+Person related resources of the **Person API**
+
+## Person Collection [/people?{pin}{name}{pagination}{offset}]
+### List People [GET]
+
++ Parameters
+    + pin (optional, string, `212005`) ... Text `PIN` of the desired person(s).
+    + name (optional, string, `Bob`) ... Text `name` of the desired person(s).
+    + pagination (optional, integer, `10`) ... Numeric `pagination` of the desired pagination size.
+    + offset (optional, integer, `0`) ... Numeric `offset` of the desired offset of the pagination.
+
++ Response 200 (application/json)
+
+        [
+            { "pin": "203245", 
+              "firstName": "Suzan",
+              "middleName": "",
+              "lastName": "Dave",
+              "initial": "Mrs",
+              "birthdate": "01-01-1990", 
+              "address": "3rd floor", 
+              "street": "34 xyz st.", 
+              "zip": "1234", 
+              "city": "Beijing", 
+              "country": "China", 
+              "phone": 232323, 
+              "mobile": 4545454, 
+              "work": 6767676,
+              "gender": "F"
+            }, 
+            { "pin": "205245", 
+              "firstName": "Bob",
+              "middleName": "",
+              "lastName": "Alex",
+              "initial": "Mr",
+              "birthdate": "19-05-1999", 
+              "address": "1st floor", 
+              "street": "22 abc st.", 
+              "zip": "1234", 
+              "city": "Beijing", 
+              "country": "China", 
+              "phone": 22222, 
+              "mobile": 33333, 
+              "work": 44444,
+              "gender": "M"
+            }
+        ]
