@@ -73,7 +73,7 @@ c) IP format is wrong
 A single Device object with all its details
 
 + Parameters
-    + id (required, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
+    + id (required, number, `1`) ... Numeric `id` of the Device to perform action with. Has example value.
 
 ### Show/Retrieve a Device [GET]
 + Response 200 (application/json)
@@ -109,6 +109,62 @@ d) invalid id
 
         { "sn": "1234", 
           "name": "device", 
+          "ip": "192.168.0.0", 
+          "state": 2, 
+          "productName": "myProduct", 
+          "userCount": 2, 
+          "fingerPrintCount": 3, 
+          "transactionCount": 12
+        }
+        
++ Response 200 
+        
++ Response 400 (application/json)
+
+        [
+            { "errorCode": "3" },
+            { "errorCode": "6" }
+        ]
+
+## Device [/devices/{sn}]
+A single Device object with all its details, by serial number
+
++ Parameters
+    + sn (required, string, `1`) ... Text `sn` of the Device to perform action with. Has example value.
+
+### Show/Retrieve a Device [GET]
++ Response 200 (application/json)
+
+    + Body
+
+            { "sn": "1234", 
+              "name": "device", 
+              "ip": "192.168.0.0", 
+              "state": 2, 
+              "productName": "myProduct", 
+              "userCount": 2, 
+              "fingerPrintCount": 3, 
+              "transactionCount": 12
+            }
+        
+
+### Remove a Device [DELETE]
++ Response 204
+
++ Response 400 (application/json)
+
+        { "errorCode": "6" }
+        
+### Update a Device [POST]
+state allowed values: DvcSttsA (Active) - DvcSttsI (Inactive) - DvcSttsC (Connected) - DvcSttsD (Disconnected)</br>
+error codes will be either:</br>
+a) missing mndatory field (IP)</br>
+b) duplicate entry (IP)</br>
+c) IP format is wrong</br>
+d) invalid serial
++ Request (application/json)
+
+        { "name": "device", 
           "ip": "192.168.0.0", 
           "state": 2, 
           "productName": "myProduct", 
