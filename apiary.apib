@@ -21,8 +21,25 @@ Devices related resources of the **Devices API**
 
 + Response 200 (application/json)
 
-        [{ "sn": "1234", "name": "device", "ip": "192.168.0.0", "state": 2, "productName": "myProduct", "userCount": 2, "fingerPrintCount": 3, "transactionCount": 12}
-        , { "sn": "12345", "name": "device2", "ip": "192.168.10.0", "state": 1, "productName": "myProduct2", "userCount": 12, "fingerPrintCount": 13, "transactionCount": 11}
+        [
+            { "sn": "1234", 
+              "name": "device", 
+              "ip": "192.168.0.0", 
+              "state": 2, 
+              "productName": "myProduct", 
+              "userCount": 2, 
+              "fingerPrintCount": 3, 
+              "transactionCount": 12
+            }, 
+            { "sn": "12345",
+              "name": "device2", 
+              "ip": "192.168.10.0", 
+              "state": 1, 
+              "productName": "myProduct2", 
+              "userCount": 12, 
+              "fingerPrintCount": 13, 
+              "transactionCount": 11
+            }
         ]
 
 ## Devices Collection [/devices]
@@ -34,15 +51,23 @@ b) duplicate entry (SN or IP)</br>
 c) IP format is wrong
 + Request (application/json)
 
-        { "sn": "1234", "name": "device", "ip": "192.168.0.0"}
+        { "sn": "1234", 
+          "name": "device", 
+          "ip": "192.168.0.0"
+        }
         
 + Response 201 (application/json)
 
-        { "id": 3, "state": "DvcSttsD" }
+        { "id": 3, 
+          "state": "DvcSttsD" 
+        }
         
 + Response 400 (application/json)
 
-        [{ "errorCode": "3" }, { "errorCode": "6" }]
+        [
+            { "errorCode": "3" },
+            { "errorCode": "6" }
+        ]
 
 ## Device [/devices/{id}]
 A single Device object with all its details
@@ -55,7 +80,15 @@ A single Device object with all its details
 
     + Body
 
-            { "sn": "1234", "name": "device", "ip": "192.168.0.0", "state": 2, "productName": "myProduct", "userCount": 2, "fingerPrintCount": 3, "transactionCount": 12}
+            { "sn": "1234", 
+              "name": "device", 
+              "ip": "192.168.0.0", 
+              "state": 2, 
+              "productName": "myProduct", 
+              "userCount": 2, 
+              "fingerPrintCount": 3, 
+              "transactionCount": 12
+            }
         
 
 ### Remove a Device [DELETE]
@@ -74,10 +107,21 @@ c) IP format is wrong</br>
 d) invalid id
 + Request (application/json)
 
-        { "sn": "1234", "name": "device", "ip": "192.168.0.0", "state": 2, "productName": "myProduct", "userCount": 2, "fingerPrintCount": 3, "transactionCount": 12}
+        { "sn": "1234", 
+          "name": "device", 
+          "ip": "192.168.0.0", 
+          "state": 2, 
+          "productName": "myProduct", 
+          "userCount": 2, 
+          "fingerPrintCount": 3, 
+          "transactionCount": 12
+        }
         
 + Response 200 
         
 + Response 400 (application/json)
 
-        [{ "errorCode": "3" }, { "errorCode": "6" }]
+        [
+            { "errorCode": "3" },
+            { "errorCode": "6" }
+        ]
