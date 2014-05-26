@@ -25,9 +25,12 @@ Devices related resources of the **Devices API**
         , { "sn": "12345", "name": "device2", "ip": "192.168.10.0", "state": 1, "productName": "myProduct2", "userCount": 12, "fingerPrintCount": 13, "transactionCount": 11}
         ]
 
+## Devices Collection [/devices]
 ### Create a Device [POST]
-#### state allowed values: DvcSttsA (Active) - DvcSttsI (Inactive) - DvcSttsC (Connected) - DvcSttsD (Disconnected)
-#### error codes will be either: a) missing mndatory field (SN or IP) b) duplicate entry (SN or IP) c) IP format is wrong
+state allowed values: DvcSttsA (Active) - DvcSttsI (Inactive) - DvcSttsC (Connected) - DvcSttsD (Disconnected)</br>
+error codes will be either:</br>
+a) missing mndatory field (SN or IP)</br>
+b) duplicate entry (SN or IP) c) IP format is wrong
 + Request (application/json)
 
         { "sn": "1234", "name": "device", "ip": "192.168.0.0"}
