@@ -227,6 +227,22 @@ a) Invalid serial
             { "errorCode": "6" }
         ]
 
+## Collect Device's Transactions  [/command/check-user-trans?{sn}]        
+### Check Out Person Transactions(_Logs_) from a specified Device [GET]
+Error codes will be either:</br>
+a) Invalid serial
++ Parameters
+    + sn (required, string, `1234`) ... Text `sn` of the desired device(s).
+
++ Response 200
+
++ Response 400 (application/json)
+
+        [
+            { "errorCode": "3" },
+            { "errorCode": "6" }
+        ]
+
 ## Reboot Device  [/command/reboot?{sn}]
 ### Reboot a specified Device [GET]
 Error codes will be either:</br>
