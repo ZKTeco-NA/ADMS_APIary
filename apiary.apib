@@ -504,3 +504,36 @@ c) Invalid PIN
             { "errorCode": "3" },
             { "errorCode": "6" }
         ]
+        
+## Attendance Transactions Collection [/attendance?{pin}{from}{to}{pagination}{offset}]
+Attendance related resources for the **Attendance transaction API**
+
++ Parameters
+    + pin (required, string, `202235`) ... Text `pin` of the Person to perform action with. Has example value.
+    + from (optional, date, `20-05-2014`) ... Date `from` of the attendance. Has example value.
+    + to (optional, date, `25-05-2014`) ... Date `to` of the attendance. Has example value.
+    
+
+### Show/Retrieve Attendance Transaction List [GET]
+1. Inout values:
+    * '0' is Check in.
+    * '1' is Check out.
+    * '4' is Over time in.
+    * '5' is Over time out.
+2. Verify By Method values: 
+    * '0' is Finger.
+    * '1' is Card.
+
++ Response 200 (application/json)
+
+    + Body
+
+            { "id": 3, 
+              "pin": "203245", 
+              "firstName": "Suzan",
+              "middleName": "",
+              "lastName": "Dave",
+              "transDate": "01-01-1990", 
+              "inout": "1", 
+              "verifyBy": "1"
+            }
