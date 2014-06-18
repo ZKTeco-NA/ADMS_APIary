@@ -245,12 +245,12 @@ a) Invalid serial
 
 ## Clear Device's Data  [/command/clear?{sn}{type}]
 ### Clear Data on specific Device [GET]
-Clear data on specific device given its serial number, and define the data to be cleared either **all** data ( _both users and logs_ ) or **users** only or **logs** only  
+Clear data on specific device given its serial number, and define the data to be cleared either **all** data ( _both users and logs_ ) or **logs** only or **attendance photos** only  
 Error codes will be either:</br>
 a. Invalid serial
 + Parameters
     + sn (required, string, `1234`) ... Text `sn` of the desired device(s).
-    + type (optional, string, `all,log,user`) ... Text `type` of the desired Data type.
+    + type (optional, string, `all,log,photo`) ... Text `type` of the desired Data type. If not passed then clear all data.
 
 + Response 200
 
