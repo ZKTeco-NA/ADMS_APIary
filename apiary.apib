@@ -243,6 +243,24 @@ a) Invalid serial
             { "errorCode": "6" }
         ]
 
+## Clear Device's Data  [/command/clear?{sn}{type}]
+### Clear Data on specific Device [GET]
+Clear data on specific device given its serial number, and define the data to be cleared either **all** data ( _both users and logs_ ) or **users** only or **logs** only  
+Error codes will be either:</br>
+a. Invalid serial
++ Parameters
+    + sn (required, string, `1234`) ... Text `sn` of the desired device(s).
+    + type (optional, string, `all,log,user`) ... Text `type` of the desired Data type.
+
++ Response 200
+
++ Response 400 (application/json)
+
+        [
+            { "errorCode": "3" },
+            { "errorCode": "6" }
+        ]
+
 ## Reboot Device  [/command/reboot?{sn}]
 ### Reboot a specified Device [GET]
 Error codes will be either:</br>
